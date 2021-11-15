@@ -1,5 +1,5 @@
 Single page project done using: https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-light-bright-app.
-Main points of project:
+Main points of the project:
 - You can click the circle to: 1) Give circle color 2) Change existing circle color.
 - You can double click circle to remove existing color.
 - You can click and then drag to color circles instead of clicking them individually.
