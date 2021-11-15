@@ -10,13 +10,13 @@ class App extends React.Component {
       lastColor: '',
       isTRUE: true,
     }
-    this.myRef = React.createRef();
     this.handleCompleteReset = this.handleCompleteReset.bind(this);
     this.handleResetColor = this.handleResetColor.bind(this);
+    this.handleDrag = this.handleDrag.bind(this);
+    this.handleDragLeave = this.handleDragLeave.bind(this);
   }
   handleColorChange = (e) => {
-    let hex = Math.floor(Math.random() * 0xFFFFFF);
-    let newColor = '#' + ("000000" + hex.toString(16)).substr(-6);
+    let newColor = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
     let currValue = e.target.id;
     if(!this.state.color.includes(currValue)) {   
       this.setState({
@@ -33,11 +33,26 @@ class App extends React.Component {
       })
     }
   }
+  handleDrag = (event) => {
+    if(this.state.lastColor !== '') {
+      event.target.style.backgroundColor = this.state.lastColor;
+    }
+    event.dataTransfer.effectAllowed = "copyMove";
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  handleDragLeave = (event) => {
+    this.setState({
+      lastID: event.target.id
+    })
+    event.stopPropagation();
+    event.preventDefault();
+  }
   handleColorReset = (event) => {
-     if(this.state.color.map(el => el === this.state.lastID)) {
+     if(event.target.id === this.state.lastID) {
+        event.target.style.backgroundColor = null;
         this.setState({
-          lastID: '',
-          lastColor: ''
+          lastColor: '',
         })
      }
      event.preventDefault();
@@ -75,7 +90,8 @@ class App extends React.Component {
             <div className='circle' 
             key={i}
             id={i}
-            ref={this.myRef}
+            onDragLeave = {this.handleDragLeave}
+            onDragEnter = {this.handleDrag}
             onClick={this.handleColorChange}
             onDoubleClick={this.handleColorReset}
             style={this.state.isTRUE === false ? {backgroundColor: null} : {} }>
