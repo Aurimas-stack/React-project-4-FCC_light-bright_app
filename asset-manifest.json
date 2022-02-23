@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-project-4-FCC_light-bright_app/static/css/main.d27787f8.chunk.css",
+    "main.js": "/React-project-4-FCC_light-bright_app/static/js/main.6dc80d6c.chunk.js",
+    "main.js.map": "/React-project-4-FCC_light-bright_app/static/js/main.6dc80d6c.chunk.js.map",
+    "runtime-main.js": "/React-project-4-FCC_light-bright_app/static/js/runtime-main.9778f86e.js",
+    "runtime-main.js.map": "/React-project-4-FCC_light-bright_app/static/js/runtime-main.9778f86e.js.map",
+    "static/js/2.97bf603b.chunk.js": "/React-project-4-FCC_light-bright_app/static/js/2.97bf603b.chunk.js",
+    "static/js/2.97bf603b.chunk.js.map": "/React-project-4-FCC_light-bright_app/static/js/2.97bf603b.chunk.js.map",
+    "static/js/3.8a98c8b9.chunk.js": "/React-project-4-FCC_light-bright_app/static/js/3.8a98c8b9.chunk.js",
+    "static/js/3.8a98c8b9.chunk.js.map": "/React-project-4-FCC_light-bright_app/static/js/3.8a98c8b9.chunk.js.map",
+    "index.html": "/React-project-4-FCC_light-bright_app/index.html",
+    "static/css/main.d27787f8.chunk.css.map": "/React-project-4-FCC_light-bright_app/static/css/main.d27787f8.chunk.css.map",
+    "static/js/2.97bf603b.chunk.js.LICENSE.txt": "/React-project-4-FCC_light-bright_app/static/js/2.97bf603b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9778f86e.js",
+    "static/js/2.97bf603b.chunk.js",
+    "static/css/main.d27787f8.chunk.css",
+    "static/js/main.6dc80d6c.chunk.js"
+  ]
+}
